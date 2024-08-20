@@ -11,7 +11,7 @@ const Sidebar = () => {
   return (
     <div className={`flex flex-col ${isOpen ? 'w-64' : 'w-20'} bg-gray-950 h-screen p-4 transition-width duration-300 z-50`}>
       <div className="flex justify-between items-center mb-6">
-        <h1 className={`text-white text-2xl font-bold ${isOpen ? 'block' : 'hidden'}`}>RPG Community</h1>
+        <h1 className={`text-white text-xl font-bold ${isOpen ? 'block' : 'hidden'}`}>RPG Community</h1>
         <button
           onClick={toggleSidebar}
           className="text-white focus:outline-none">
@@ -21,27 +21,27 @@ const Sidebar = () => {
       <ul className="flex flex-col space-y-4">
         <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded cursor-pointer">
           <FaHome />
-          <span className={`ml-4 ${isOpen ? 'block' : 'hidden'}`}>Home</span>
+          <span className={`ml-4 text-sm font-semibold ${isOpen ? 'block' : 'hidden'}`}>Home</span>
         </li>
         <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded cursor-pointer">
           <FaUser />
-          <span className={`ml-4 ${isOpen ? 'block' : 'hidden'}`}>Perfil</span>
+          <span className={`ml-4 text-sm font-semibold ${isOpen ? 'block' : 'hidden'}`}>Perfil</span>
         </li>
         <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded cursor-pointer">
           <FaUsers />
-          <span className={`ml-4 ${isOpen ? 'block' : 'hidden'}`}>Aventuras</span>
+          <span className={`ml-4 text-sm font-semibold ${isOpen ? 'block' : 'hidden'}`}>Aventuras</span>
         </li>
-        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded cursor-pointer">
+        <li className="flex items-center  text-white hover:bg-gray-700 p-2 rounded cursor-pointer">
           <FaBookOpen />
-          <span className={`ml-4 ${isOpen ? 'block' : 'hidden'}`}>Minhas Fichas</span>
+          <span className={`ml-4  text-sm font-semibold ${isOpen ? 'block' : 'hidden'}`}>Minhas Fichas</span>
         </li>
         <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded cursor-pointer">
           <FaCog />
-          <span className={`ml-4 ${isOpen ? 'block' : 'hidden'}`}>Configurações</span>
+          <span className={`ml-4  text-sm font-semibold ${isOpen ? 'block' : 'hidden'}`}>Configs</span>
         </li>
         <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded cursor-pointer">
           <FaSignOutAlt />
-          <span className={`ml-4 ${isOpen ? 'block' : 'hidden'}`}>Logout</span>
+          <span className={`ml-4  text-sm font-semibold ${isOpen ? 'block' : 'hidden'}`}>Logout</span>
         </li>
       </ul>
     </div>

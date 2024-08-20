@@ -23,7 +23,7 @@ function Login() {
 
             console.log(response.data);
             setUser(response.data);
-
+            
         } catch (error) {
             if (!error?.response) {
                 setError('Erro ao acessar o servidor');
