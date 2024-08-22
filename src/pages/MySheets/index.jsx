@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
 import Card from "../../components/Card";
+import Sidebar from "../../components/Sidebar";
 import api from "../../services/api";
 
-const Home = () => {
+const MySheets = () => {
   const [characters, setCharacters] = useState([]);
   useEffect(() => {
     api
@@ -16,6 +15,9 @@ const Home = () => {
       })
       .then((response) => {
         setCharacters(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, []);
 
@@ -36,12 +38,23 @@ const Home = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className=" flex flex-col w-full">
-        <Header />
-        <div className="grid grid-cols-3">{renderCards()}</div>
+      <div className="flex flex-col w-full justify-center">
+        <div className="flex flex-wrap justify-center">
+          <div className="p-5">
+            <Card
+              key={"0"}
+              title={"‎"}
+              imageUrl={
+                "https://firebasestorage.googleapis.com/v0/b/grimorium-a0683.appspot.com/o/plusIcon.png?alt=media&token=069f298b-ce23-48e6-8015-d2158514bdec"
+              }
+              buttonText="Nova ficha"
+            />
+          </div>
+          {renderCards()}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default MySheets;
