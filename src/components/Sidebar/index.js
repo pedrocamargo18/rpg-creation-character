@@ -29,7 +29,7 @@ const Sidebar = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          RPG Community
+          Grimorium
         </h1>
         <button
           onClick={toggleSidebar}

@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Card = ({ title, imageUrl, buttonText }) => {
+const Card = ({ title, imageUrl, buttonText, typeClick }) => {
   return (
     <div className="w-72 h-auto rounded overflow-hidden shadow-lg bg-white">
-      {imageUrl && (
-        <img className="w-full h-80" src={imageUrl} alt={title} />
-      )}
+      {imageUrl && <img className="w-full h-80" src={imageUrl} alt={title} />}
       <div className="px-6 py-4 w-full justify-center">
         <div className="font-bold text-xl mb-2 text-center">{title}</div>
       </div>
