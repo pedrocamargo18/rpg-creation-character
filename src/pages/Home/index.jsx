@@ -34,11 +34,11 @@ const Home = () => {
     });
   };
   return (
-    <div className="flex">
+    <div className="flex ">
       <Sidebar />
       <div className=" flex flex-col w-full">
         <Header />
-        <div className="grid grid-cols-3">{renderCards()}</div>
+        <div className="grid grid-cols-4">{renderCards()}</div>
       </div>
     </div>
   );

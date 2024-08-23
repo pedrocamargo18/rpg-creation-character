@@ -21,7 +21,7 @@ const Sidebar = () => {
     <div
       className={`flex flex-col ${
         isOpen ? "w-64" : "w-20"
-      } bg-gray-950 h-screen p-4 transition-width duration-300 z-50`}
+      } bg-gray-950 h-screen p-4  z-50`}
     >
       <div className="flex justify-between items-center mb-6">
         <h1
