@@ -52,7 +52,10 @@ const Sidebar = () => {
             Home
           </span>
         </li>
-        <li className="flex items-center text-white hover:bg-gray-700 p-2 rounded cursor-pointer">
+        <li
+          className="flex items-center text-white hover:bg-gray-700 p-2 rounded cursor-pointer"
+          onClick={() => navigate("/perfil")}
+        >
           <FaUser />
           <span
             className={`ml-4 text-sm font-semibold ${
