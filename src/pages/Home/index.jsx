@@ -38,7 +38,13 @@ const Home = () => {
       <Sidebar />
       <div className=" flex flex-col w-full">
         <Header />
-        <div className="grid grid-cols-4">{renderCards()}</div>
+        <div className="bg-indigo-900 w-full h-full">
+
+        <div className="grid grid-cols-4">
+          <h1 className="m-5 text-white font-semibold text-xl ">Meus Personagens</h1>
+          {renderCards()}
+          </div>
+        </div>
       </div>
     </div>
   );

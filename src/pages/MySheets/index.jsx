@@ -42,14 +42,14 @@ const MySheets = () => {
     });
   };
   return (
-    <div className="flex">
+    <div className="flex bg-indigo-900">
       <Sidebar />
       <div className="flex flex-col w-full mt-5">
-        <div className=" flex flex-row pb-5 justify-between border-gray-600 border-b-2 m-6 items-end">
+        <div className=" flex flex-row pb-5 justify-between m-6 items-end">
           <h1 className="text-3xl font-bold text-white mb-2">Minhas Fichas</h1>
         </div>
           <button
-            className="text-2xl w-64 h-12 rounded-lg justify-between shadow-lg text-white bg-blue-900 p-2 mx-6 hover:bg-blue-600"
+            className="text-2xl w-64 h-12 rounded-2xl justify-between shadow-lg text-white bg-green-500 p-2 mx-6 hover:bg-green-600"
             onClick={handleNewSheet}
           >
             Nova Ficha
