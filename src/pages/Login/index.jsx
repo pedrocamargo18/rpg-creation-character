@@ -1,6 +1,7 @@
 import { useState } from "react";
 import api from "../../services/api";
 import { useNavigate } from "react-router-dom";
+import Logo from '../../assets/logo.png'
 
 function Login() {
   const navigate = useNavigate();
@@ -30,8 +31,9 @@ function Login() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center shadow-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+    <div className="h-screen grid grid-col-2  items-center justify-center shadow-xl bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl w-full">
+      <img className="mx-auto w-48 h-48" src={Logo} alt="Logo" />
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
         <form className="space-y-4" onSubmit={handleLogin}>
           <input
@@ -62,6 +64,9 @@ function Login() {
         {error && (
           <p className="mt-4 text-center text-red-500">{error}</p>
         )}
+      </div>
+      <div>
+        <p></p>
       </div>
     </div>
   );

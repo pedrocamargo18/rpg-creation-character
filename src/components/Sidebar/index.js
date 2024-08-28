@@ -10,7 +10,7 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { Tooltip } from "@mui/material"; // Adicione essa biblioteca para tooltips
+import { Tooltip } from "@mui/material";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ const Sidebar = () => {
       <div className="flex justify-between items-center mb-6">
         <h1
           className={`text-white text-xl font-bold transition-opacity duration-300 ${
-            isOpen ?  "block" : "hidden"
+            isOpen ? "block" : "hidden"
           }`}
         >
           Grimorium
@@ -47,7 +47,7 @@ const Sidebar = () => {
           {isOpen ? <FaChevronLeft /> : <FaChevronRight />}
         </button>
       </div>
-      <ul className="flex flex-col space-y-4">
+      <ul className="flex flex-col space-y-4 flex-grow">
         <li
           className={`flex items-center text-white p-2 rounded cursor-pointer hover:bg-gray-700 transition-colors duration-200 ${
             activeItem === "/home" ? "bg-gray-800" : ""
@@ -59,27 +59,10 @@ const Sidebar = () => {
           </Tooltip>
           <span
             className={`ml-4 text-sm font-semibold transition-opacity duration-300 ${
-              isOpen ?  "block" : "hidden"
+              isOpen ? "block" : "hidden"
             }`}
           >
             Home
-          </span>
-        </li>
-        <li
-          className={`flex items-center text-white p-2 rounded cursor-pointer hover:bg-gray-700 transition-colors duration-200 ${
-            activeItem === "/perfil" ? "bg-gray-800" : ""
-          }`}
-          onClick={() => handleNavigate("/perfil")}
-        >
-          <Tooltip title="Perfil" placement="right" arrow disableHoverListener={isOpen}>
-            <FaUser />
-          </Tooltip>
-          <span
-            className={`ml-4 text-sm font-semibold transition-opacity duration-300 ${
-              isOpen ?  "block" : "hidden"
-            }`}
-          >
-            Perfil
           </span>
         </li>
         <li
@@ -93,7 +76,7 @@ const Sidebar = () => {
           </Tooltip>
           <span
             className={`ml-4 text-sm font-semibold transition-opacity duration-300 ${
-              isOpen ?  "block" : "hidden"
+              isOpen ? "block" : "hidden"
             }`}
           >
             Aventuras
@@ -110,7 +93,7 @@ const Sidebar = () => {
           </Tooltip>
           <span
             className={`ml-4 text-sm font-semibold transition-opacity duration-300 ${
-              isOpen ?  "block" : "hidden"
+              isOpen ? "block" : "hidden"
             }`}
           >
             Minhas Fichas
@@ -127,7 +110,7 @@ const Sidebar = () => {
           </Tooltip>
           <span
             className={`ml-4 text-sm font-semibold transition-opacity duration-300 ${
-              isOpen ?  "block" : "hidden"
+              isOpen ? "block" : "hidden"
             }`}
           >
             Configs
@@ -142,17 +125,26 @@ const Sidebar = () => {
           </Tooltip>
           <span
             className={`ml-4 text-sm font-semibold transition-opacity duration-300 ${
-              isOpen ?  "block" : "hidden"
+              isOpen ? "block" : "hidden"
             }`}
           >
             Logout
           </span>
         </li>
       </ul>
-      {/* Rodapé com informações adicionais */}
       {isOpen && (
-        <div className="mt-auto text-white text-xs text-center">
-          <p>Versão 1.0.0</p>
+        <div className="mt-auto">
+          <div className="flex items-center p-2 bg-indigo-800 rounded-full cursor-pointer ">
+            <img
+              alt="profile"
+              className="w-8 h-8 rounded-full"
+              src="https://via.placeholder.com/150"
+            />
+            <span onClick={() => handleNavigate("/perfil")} className="ml-4 text-white text-md font-semibold">Meu Perfil</span>
+          </div>
+          <div className="text-white text-xs text-center mt-2">
+            <p>Versão 1.0.0</p>
+          </div>
         </div>
       )}
     </div>
