@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import Card from "../../components/Card";
 import api from "../../services/api";
+import DiceRoller from "../../components/DiceRoller";
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -39,6 +40,9 @@ const Home = () => {
       <div className=" flex flex-col w-full">
         <Header />
         <div className="bg-indigo-900 w-full h-full">
+          <div className="flex justify-center items-center">
+            <DiceRoller />
+          </div>
           <h1 className="m-5 text-white font-semibold text-xl ">
             Meus Personagens
           </h1>
