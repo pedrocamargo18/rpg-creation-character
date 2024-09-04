@@ -27,6 +27,8 @@ const facePositions = [
   [-0.8, -0.8, 0.8],
 ];
 
+const valueDice = Math.floor(Math.random() * 20) + 1;
+
 function DiceMesh({ rotation }) {
   const meshRef = useRef();
 
@@ -78,6 +80,7 @@ function DiceRoller() {
         <directionalLight position={[10, 10, 5]} />
         <DiceMesh rotation={rotation} />
       </Canvas>
+      <span>{valueDice}</span>
       <button
         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
         onClick={rollDice}
